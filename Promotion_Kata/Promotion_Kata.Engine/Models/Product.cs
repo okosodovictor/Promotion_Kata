@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Promotion_Kata.Engine.Models
 {
-    class Product
+    public abstract class Product
     {
+        public virtual decimal Price { get; }
     }
 }
