@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Promotion_Kata.Engine.DomainModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -27,14 +28,12 @@ namespace Promotion_Kata.Engine.Models
 					return false;
 				}
 			}
-
 			//If all the rules in the ruleset are met
 			//Reduce the cart by the value of the rules
 			foreach (var rule in Ruleset)
 			{
 				cart[rule.Key] -= rule.Value;
 			}
-
 			//A Match was found and the cart has been reduced
 			return true;
 		}
