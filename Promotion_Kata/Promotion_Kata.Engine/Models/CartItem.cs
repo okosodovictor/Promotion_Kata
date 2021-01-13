@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Promotion_Kata.Engine.DomainModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
