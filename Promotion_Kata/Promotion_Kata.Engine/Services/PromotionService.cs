@@ -1,4 +1,5 @@
-﻿using Promotion_Kata.Engine.Models;
+﻿using Promotion_Kata.Engine.DomainModels;
+using Promotion_Kata.Engine.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,21 @@ namespace Promotion_Kata.Engine.Services
 			}
 
 			return total;
+		}
+
+		/// <summary>
+		/// This is added here to return sample active promotions for a real 
+		/// project this could come from files, database or external service.
+		/// This is assume to be the promotion thatis active.
+		/// </summary>
+
+		public static PromotionRule[] GetActivePromotions()
+        {
+			return new[] {
+					new PromotionRule(new Dictionary<Product, int> { { new ProductA(), 3} },130), // 3 A
+                    new PromotionRule(new Dictionary<Product, int> { { new ProductB(), 2 } },45),  // 2 B
+                    new PromotionRule(new Dictionary<Product, int> { { new ProductC(), 1 }, { new ProductD(), 1 } }, 30) // 1 C & 1 D
+            };
 		}
 	}
 }
